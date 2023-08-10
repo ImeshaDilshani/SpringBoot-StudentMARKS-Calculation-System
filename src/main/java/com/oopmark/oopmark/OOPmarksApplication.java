@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class OopmarkApplication {
+public class OOPmarksApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OopmarkApplication.class, args);
+        SpringApplication.run(OOPmarksApplication.class, args);
     }
 
     @Bean

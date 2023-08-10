@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>View OOP Marks</title>
+    <style>
+        .topic1{
+            font-family: Roboto;
+        }
+        .student-table{
+            border-collapse: collapse;
+            margin: 50px 0;
+            font-size: 1.25em;
+            font-family: Roboto;
+            min-width: 400px;
+            box-shadow: #202528;
+        }
+
+        .student-table thead tr{
+            background-color: #3bb5f3;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .student-table th,
+        .student-table td{
+            padding: 12px 15px;
+        }
+
+        .student-table tbody tr{
+            border-bottom: 1px solid #dddddd;
+        }
+
+    </style>
 </head>
 <body>
-$END$
+    <div align="center" th:if = "${not#lists.isEmpty(students)}">
+        <table class="student-table">
+            <h1 class="topic1">View Student' OOP Marks</h1>
+                <tr >
+                    <th> Student ID</th>
+                    <th> Name</th>
+                    <th> CA</th>
+                    <th> Practical</th>
+                    <th> Theory</th>
+                    <th> Final</th>
+                </tr>
+            <tr th:each="student: ${students}">
+                <td th:text = "${student.studentID}"></td>
+                <td th:text = "${student.Name}"></td>
+                <td th:text = "${student.CA}"></td>
+                <td th:text = "${student.Practical}"></td>
+                <td th:text = "${student.Theory}"></td>
+                <td th:text = "${student.Final}"></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

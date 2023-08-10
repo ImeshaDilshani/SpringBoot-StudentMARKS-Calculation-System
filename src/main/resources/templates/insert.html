@@ -1,10 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Insert OOP Marks</title>
+    <script>
+        function saveStudent(){
+            window.location.href="/view.html";
+        }
+    </script>
+    <style>
+        .topic1{
+            font-family: Roboto;
+        }
+
+
+        .header{
+            align-content: center;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            min-height: 100vh;
+        }
+        .form-main{
+            padding: 50px 0;
+        }
+        .form{
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+        }
+
+        .btn-sv{
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #06bfd5;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <section class="header">
+        <div class="form-main" align="center">
+            <form>
+                <h1 class="topic1">Enter Student OOP Marks</h1>
+
+                <div>
+                    <label > Student ID </label>
+                    <input type="text"  id="studentid" class="form">
+                </div>
+                <br>
+                <div>
+                    <label >Student Name</label>
+                    <input type="text"  id="studentname" class="form">
+                </div>
+                <br>
+                <div>
+                    <label>CA</label>
+                    <input type="text"  id="ca" class="form">
+                </div>
+                <br>
+                <div>
+                    <label>Practical</label>
+                    <input type="text"  id="practical" class="form">
+                </div>
+                <br>
+                <div>
+                    <label>Theory</label>
+                    <input type="text"  id="theory" class="form">
+                </div>
+                <br>
+                <div>
+                    <button type="button" class="btn-sv" onclick="viewStudent()">View All Marks</button>
+                </div>
+                <br>
+                <div>
+                    <button type="button" class="btn-sv" onclick="saveStudent()">Save</button>
+                </div>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
