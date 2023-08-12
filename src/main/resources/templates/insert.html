@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Insert OOP Marks</title>
-    <script>
-        function saveStudent(){
-            window.location.href="/getStudent";
-        }
-    </script>
+
     <style>
         .topic1{
             font-family: Roboto;
@@ -48,7 +44,7 @@
 <body>
     <section class="header">
         <div class="form-main" align="center">
-            <form action="" th:action="@{/}" th:object="${studentDTO}" method="post">
+            <form th:action="@{/}" th:object="${studentDTO}" method="post">
                 <h1 class="topic1">Enter Student OOP Marks</h1>
 
                 <div>
@@ -77,11 +73,11 @@
                 </div>
                 <br>
                 <div>
-                    <button type="button" class="btn-sv" onclick="saveStudent()">View All Marks</button>
+                    <button type="button" class="btn-sv" onclick="saveStudent()">Save</button>
                 </div>
                 <br>
                 <div>
-                    <button type="button" class="btn-sv" >Save</button>
+                    <button type="button" class="btn-sv" onclick="getAllStudent()">View All Marks</button>
                 </div>
             </form>
         </div>
