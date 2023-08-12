@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Insert OOP Marks</title>
     <script>
         function saveStudent(){
-            window.location.href="/view.html";
+            window.location.href="/getStudent";
         }
     </script>
     <style>
@@ -48,43 +48,44 @@
 <body>
     <section class="header">
         <div class="form-main" align="center">
-            <form>
+            <form action="" th:action="@{/}" th:object="${studentDTO}" method="post">
                 <h1 class="topic1">Enter Student OOP Marks</h1>
 
                 <div>
                     <label > Student ID </label>
-                    <input type="text"  id="studentid" class="form">
+                    <input type="text"  id="studentid" class="form" required th:field="*{studentID}">
                 </div>
                 <br>
                 <div>
                     <label >Student Name</label>
-                    <input type="text"  id="studentname" class="form">
+                    <input type="text"  id="studentname" class="form" required th:field="*{Name}">
                 </div>
                 <br>
                 <div>
                     <label>CA</label>
-                    <input type="text"  id="ca" class="form">
+                    <input type="text"  id="ca" class="form" required th:field="*{CA}">
                 </div>
                 <br>
                 <div>
                     <label>Practical</label>
-                    <input type="text"  id="practical" class="form">
+                    <input type="text"  id="practical" class="form" required th:field="*{Practical}">
                 </div>
                 <br>
                 <div>
                     <label>Theory</label>
-                    <input type="text"  id="theory" class="form">
+                    <input type="text"  id="theory" class="form" required th:field="*{Theory}">
                 </div>
                 <br>
                 <div>
-                    <button type="button" class="btn-sv" onclick="viewStudent()">View All Marks</button>
+                    <button type="button" class="btn-sv" onclick="saveStudent()">View All Marks</button>
                 </div>
                 <br>
                 <div>
-                    <button type="button" class="btn-sv" onclick="saveStudent()">Save</button>
+                    <button type="button" class="btn-sv" >Save</button>
                 </div>
             </form>
         </div>
     </section>
 </body>
+
 </html>
