@@ -47,11 +47,11 @@
                 </tr>
             <tr th:each="student: ${studentList}">
                 <td th:text = "${studentList.studentID}"></td>
-                <td th:text = "${studentList.Name}"></td>
-                <td th:text = "${studentList.CA}"></td>
-                <td th:text = "${studentList.Practical}"></td>
-                <td th:text = "${studentList.Theory}"></td>
-<!--                <td th:text = "${studentList.Final}"></td>-->
+                <td th:text = "${studentList.name}"></td>
+                <td th:text = "${studentList.ca}"></td>
+                <td th:text = "${studentList.practical}"></td>
+                <td th:text = "${studentList.theory}"></td>
+                <td th:text = "${studentList.finalMarks}"></td>
             </tr>
         </table>
     </div>

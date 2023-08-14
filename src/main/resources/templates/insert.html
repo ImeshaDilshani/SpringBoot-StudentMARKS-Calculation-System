@@ -5,7 +5,7 @@
     <title>Insert OOP Marks</title>
     <script>
         function saveStudent() {
-            window.location.href="/viewStudent";
+            window.location.href="view.html";
         }
     </script>
 
@@ -49,7 +49,7 @@
 <body>
     <section class="header">
         <div class="form-main" align="center">
-            <form th:action="@{/}" th:object="${studentDTO}" method="post">
+            <form th:action="@{/}" th:object="${student}" method="post">
                 <h1 class="topic1">Enter Student OOP Marks</h1>
 
                 <div>
@@ -59,30 +59,31 @@
                 <br>
                 <div>
                     <label >Student Name</label>
-                    <input type="text"  id="studentname" class="form" required th:field="*{Name}">
+                    <input type="text"  id="studentname" class="form" required th:field="*{name}">
                 </div>
                 <br>
                 <div>
                     <label>CA</label>
-                    <input type="text"  id="ca" class="form" required th:field="*{CA}">
+                    <input type="text"  id="ca" class="form" required th:field="*{ca}">
                 </div>
                 <br>
                 <div>
                     <label>Practical</label>
-                    <input type="text"  id="practical" class="form" required th:field="*{Practical}">
+                    <input type="text"  id="practical" class="form" required th:field="*{practical}">
                 </div>
                 <br>
                 <div>
                     <label>Theory</label>
-                    <input type="text"  id="theory" class="form" required th:field="*{Theory}">
+                    <input type="text"  id="theory" class="form" required th:field="*{theory}">
                 </div>
                 <br>
                 <div>
-                    <button type="button" class="btn-sv" onclick="saveStudent()">Save</button>
+                    <input type="submit" class="btn-sv" value="Save">
+                    <input type="reset" class="btn-sv" value="Reset">
                 </div>
                 <br>
                 <div>
-                    <button type="button" class="btn-sv" onclick="getAllStudent()">View All Marks</button>
+                    <button type="button" class="btn-sv" onclick="saveStudent()">View All Marks</button>
                 </div>
             </form>
         </div>

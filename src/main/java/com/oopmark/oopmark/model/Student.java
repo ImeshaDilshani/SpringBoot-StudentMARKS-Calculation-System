@@ -18,8 +18,9 @@ public class Student {
     private Long id;
 
     private String studentID;
-    private String Name;
-    private int CA;
-    private int Practical;
-    private int Theory;
+    private String name;
+    private int ca;
+    private int practical;
+    private int theory;
+    private int finalMarks;
 }
