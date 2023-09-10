@@ -34,7 +34,7 @@
     </style>
 </head>
 <body>
-    <div align="center" th:if = "${not#lists.isEmpty(studentList)}">
+    <div align="center" >
         <table class="student-table">
             <h1 class="topic1">View Student' OOP Marks</h1>
                 <tr >
@@ -45,13 +45,13 @@
                     <th> Theory</th>
                     <th> Final</th>
                 </tr>
-            <tr th:each="student: ${studentList}">
-                <td th:text = "${studentList.studentID}"></td>
-                <td th:text = "${studentList.name}"></td>
-                <td th:text = "${studentList.ca}"></td>
-                <td th:text = "${studentList.practical}"></td>
-                <td th:text = "${studentList.theory}"></td>
-                <td th:text = "${studentList.finalMarks}"></td>
+            <tr th:each="student: ${students}">
+                <td th:text = "${student.studentID}"></td>
+                <td th:text = "${student.name}"></td>
+                <td th:text = "${student.ca}"></td>
+                <td th:text = "${student.practical}"></td>
+                <td th:text = "${student.theory}"></td>
+                <td th:text = "${student.finalMarks}"></td>
             </tr>
         </table>
     </div>

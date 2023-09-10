@@ -22,5 +22,5 @@ public class Student {
     private int ca;
     private int practical;
     private int theory;
-    private int finalMarks;
+    private double finalMarks;
 }

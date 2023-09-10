@@ -21,7 +21,7 @@ public class StudentController {
 
     @RequestMapping(value = "/" ,method = RequestMethod.POST)
     public String saveStudent(@ModelAttribute Student student, Model model){
-        student.setFinalMarks((int) ((student.getCa()*0.2) + (student.getPractical()*0.2) + (student.getTheory()*.6)));
+        student.setFinalMarks ((student.getCa()*0.2) + (student.getPractical()*0.2) + (student.getTheory()*.6));
         studentService.saveStudent(student);
         System.out.println(student.toString());
         return "redirect:/";
